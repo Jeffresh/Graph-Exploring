@@ -8,8 +8,6 @@ def profundidad(l, i, m, v,k):
     v[k] = i
     k = k -1
 
-    return m ,v, k
-
 
 def orden_topologico(lista_adyacencia, numero_vertices):
 
@@ -21,7 +19,7 @@ def orden_topologico(lista_adyacencia, numero_vertices):
     for i in range(0, numero_vertices):
 
         if not visitados[i]:
-            visitados,solucion,k = profundidad(lista_adyacencia, i, visitados,solucion, k)
+            profundidad(lista_adyacencia, i, visitados,solucion, k)
 
     return solucion
 
